@@ -1,3 +1,6 @@
+import { BsInstagram } from "react-icons/bs";
+import { TfiFacebook } from "react-icons/tfi";
+
 const Footer = () => {
   return (
     <footer
@@ -7,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-4 text-lg-start">
-            Copyright © Deskampet 2025
+            Copyright © Deskampet 2026
           </div>
           <div className="col-lg-4 my-3 my-lg-0">
             <a
@@ -16,7 +19,7 @@ const Footer = () => {
               target="_blank"
               aria-label="Instagram"
             >
-              <i className="fab fa-instagram" />
+              <BsInstagram />
             </a>
             <a
               className="btn btn-dark btn-social mx-2"
@@ -24,7 +27,7 @@ const Footer = () => {
               target="_blank"
               aria-label="Facebook"
             >
-              <i className="fab fa-facebook-f" />
+              <TfiFacebook />
             </a>
           </div>
           <div className="col-lg-4 text-lg-end">
