@@ -1,30 +1,12 @@
 import { useState } from "react";
-import MapModal from "../components/MapModal.tsx";
 
-import { animalImages } from "../assets/animals/index.ts";
+import MapModal from "../components/MapModal.tsx";
+import { HomeCarousel } from "../components/HomeCarousel.tsx";
+
 import LuciePprofilePicture from "../assets/presentation-lucie-chien-champ.webp";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
-
-  const animals = [
-    animalImages.brownBulldog,
-    animalImages.redCat,
-    animalImages.beigeGoldenRetriever,
-    animalImages.brownCat,
-    animalImages.orangeCat,
-    animalImages.beigeCat,
-    animalImages.threeColoredGuineaPig,
-    animalImages.lightBrownCat,
-    animalImages.blackWhiteDogs,
-    animalImages.tabbyCat,
-    animalImages.blackDog,
-    animalImages.blackWithCat,
-    animalImages.whiteGoldenRetriever,
-    animalImages.threeColoredDog,
-    animalImages.whiteDog,
-    animalImages.whiteCat,
-  ];
 
   return (
     <div>
@@ -131,13 +113,7 @@ export default function Home() {
         </div>
         <div className="homepage-wrapper">
           <ul className="homepage-carousel">
-            {animals.map((animal) => (
-              <li className="homepage-card">
-                <div className="homepage-img">
-                  <img src={animal} alt="img" draggable="false" />
-                </div>
-              </li>
-            ))}
+            <HomeCarousel />
           </ul>
         </div>
       </div>
