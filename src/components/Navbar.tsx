@@ -19,11 +19,11 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-            <li className="nav-item menu-deroulant">
+            <li className="nav-item drop-down-menu">
               <a className="nav-link" style={{ fontSize: 17 }} href="#">
                 Accueil
               </a>
-              <div className="sous-page">
+              <div className="section">
                 <a className="nav-link" href="#">
                   Présentation
                 </a>
@@ -35,7 +35,7 @@ const Navbar = () => {
                 </a>
               </div>
             </li>
-            <li className="nav-item menu-deroulant">
+            <li className="nav-item drop-down-menu">
               <a
                 className="nav-link"
                 style={{ fontSize: 17 }}

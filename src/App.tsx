@@ -1,12 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import "./styles/index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar";
+
+import Navbar from "./components/Navbar.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <Footer />
     </BrowserRouter>
   );
 }
