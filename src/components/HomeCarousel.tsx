@@ -1,6 +1,4 @@
-import * as React from "react";
-
-import { Card, CardContent } from "@/components/ui/card";
+import React from "react";
 import {
   Carousel,
   CarouselContent,
@@ -8,10 +6,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import { animalImages } from "../assets/animals/index.ts";
 
 export function HomeCarousel() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true }),
+  );
+
   const animals = [
     animalImages.brownBulldog,
     animalImages.redCat,
@@ -33,20 +36,25 @@ export function HomeCarousel() {
 
   return (
     <Carousel
+      plugins={[plugin.current]}
       opts={{
         align: "start",
+        loop: true,
       }}
-      className="w-full max-w-[12rem] sm:max-w-xs md:max-w-sm"
+      className="w-full mx-10"
     >
       <CarouselContent>
-        {animals.map((animal, index) => (
-          <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <img src={animal} alt="img" draggable="false" />
-                </CardContent>
-              </Card>
+        {animals.map((path, index) => (
+          <CarouselItem
+            key={index}
+            className="basis-full md:basis-1/2 lg:basis-1/5"
+          >
+            <div className="pt-4">
+              <img
+                src={path}
+                alt="Animal"
+                className="rounded-lg object-cover h-110 w-full"
+              />
             </div>
           </CarouselItem>
         ))}

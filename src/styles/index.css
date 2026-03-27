@@ -166,6 +166,12 @@
   object-fit: cover;
 }
 
+.service-img {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
 @media screen and (max-width: 900px) {
   .service-wrapper .service-carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
@@ -197,7 +203,17 @@
   width: 400px;
   height: 500px;
   padding: 80px 70px 80px 70px;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 7px 7px 5px lightgray;
+  transition: transform 0.4s ease-in-out;
+}
+
+.tarifs:hover {
+  transform: scale(1.03);
+  box-shadow: 7.5px 7.5px 5.5px lightgray;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .tarifs p {

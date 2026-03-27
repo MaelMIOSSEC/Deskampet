@@ -112,9 +112,7 @@ export default function Home() {
           </div>
         </div>
         <div className="homepage-wrapper">
-          <ul className="homepage-carousel">
-            <HomeCarousel />
-          </ul>
+          <HomeCarousel />
         </div>
       </div>
       <div className="row contact" id="contact">
