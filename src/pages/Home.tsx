@@ -5,6 +5,8 @@ import { HomeCarousel } from "../components/HomeCarousel.tsx";
 
 import LuciePprofilePicture from "../assets/presentation-lucie-chien-champ.webp";
 
+import { Phone, AtSign } from "lucide-react";
+
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
@@ -150,11 +152,13 @@ export default function Home() {
             </h4>
             <hr style={{ width: 210, border: "solid 1px", color: "#150e38" }} />
             <div
-              className="col-lg-4 my-3 my-lg-0"
+              className="col-lg-4 my-3 my-lg-0 flex flex-lg-row justify-content-around mr-8"
               style={{ maxWidth: 400, paddingBottom: 10 }}
             >
               <i className="fa-solid fa-phone" width="50px" />
+              <Phone size={20}/>
               <i className="fa-solid fa-at" width="50px" />
+              <AtSign size={20}/>
             </div>
             <h4>06 03 01 37 00</h4>
             <h4>deskampet@gmail.com</h4>
