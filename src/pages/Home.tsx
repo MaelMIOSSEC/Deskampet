@@ -155,9 +155,7 @@ export default function Home() {
               className="col-lg-4 my-3 my-lg-0 flex flex-lg-row justify-content-around mr-8"
               style={{ maxWidth: 400, paddingBottom: 10 }}
             >
-              <i className="fa-solid fa-phone" width="50px" />
               <Phone size={20}/>
-              <i className="fa-solid fa-at" width="50px" />
               <AtSign size={20}/>
             </div>
             <h4>06 03 01 37 00</h4>
