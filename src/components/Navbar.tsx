@@ -1,75 +1,48 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/deskampet-logo.png";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div className="container">
-        <img src={logo} width="12%" />
+        <img src={logo} width="12%" alt="Deskampet Logo" />
+        
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={() => setIsOpen(!isOpen)}
         >
           Menu
           <i className="fas fa-bars ms-1" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
+
+        <div 
+          className={`navbar-collapse ${isOpen ? "d-block" : "d-none d-lg-flex"}`} 
+          id="navbarResponsive"
+        >
           <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
             <li className="nav-item drop-down-menu">
-              <a className="nav-link" style={{ fontSize: 17 }} href="#">
+              <Link className="nav-link" style={{ fontSize: 17 }} to="/">
                 Accueil
-              </a>
+              </Link>
               <div className="section">
-                <a className="nav-link" href="#">
-                  Présentation
-                </a>
-                <a className="nav-link" href="#propos">
-                  A Propos
-                </a>
-                <a className="nav-link" href="#contact">
-                  Contact
-                </a>
+                <a className="nav-link" href="#header">Présentation</a>
+                <a className="nav-link" href="#propos">A Propos</a>
+                <a className="nav-link" href="#contact">Contact</a>
               </div>
             </li>
             <li className="nav-item drop-down-menu">
-              <a
-                className="nav-link"
-                style={{ fontSize: 17 }}
-                href="Services/services.html"
-              >
+              <Link className="nav-link" style={{ fontSize: 17 }} to="/services">
                 Services
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                style={{ fontSize: 17 }}
-                href="aPropos/aPropos.html"
-              >
+              <Link className="nav-link" style={{ fontSize: 17 }} to="/values">
                 Valeurs
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                style={{ fontSize: 17 }}
-                href="Questions/questionsGénérales.html"
-              >
-                FAQ
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                style={{ fontSize: 17 }}
-                href="Avis/avis.html"
-              >
-                Avis clients
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

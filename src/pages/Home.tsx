@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import MapModal from "../components/MapModal.tsx";
-import { HomeCarousel } from "../components/HomeCarousel.tsx";
+import MapModal from "../components/Home/MapModal.tsx";
+import { HomeCarousel } from "../components/Home/HomeCarousel.tsx";
 
-import LuciePprofilePicture from "../assets/presentation-lucie-chien-champ.webp";
+import LuciePprofilePicture from "../assets/presentation-lucie-chien-champ.jpeg";
 
 import { Phone, AtSign } from "lucide-react";
 
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div>
-      <header className="masthead" style={{ marginTop: 50 }}>
+      <header className="masthead" id="header" style={{ marginTop: 50 }}>
         <div className="row">
           <div
             className="col-lg-6 col-md-12 col-sm-12 zone"
@@ -30,7 +30,7 @@ export default function Home() {
             </p>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
-            <img src={LuciePprofilePicture} width="950px" />
+            <img src={LuciePprofilePicture} width="100%" />
           </div>
         </div>
       </header>
@@ -70,7 +70,7 @@ export default function Home() {
                 travaillé quelques années dans le commerce landernéen, je décide
                 de <strong>repartir à zéro</strong>. La passion des animaux est
                 intacte, je découvre (enfin!) l’équitation et j’apprends la
-                <strong>patience</strong>. D’un autre côté, Doska vieillit et je
+                <strong> patience</strong>. D’un autre côté, Doska vieillit et je
                 prends particulièrement à cœur d’effectuer ses différents soins.
               </p>
               <p>
@@ -86,18 +86,14 @@ export default function Home() {
                   Domestiques)
                 </strong>
                 , formation
-                <strong>obligatoire et indispensable</strong> pour pouvoir
+                <strong> obligatoire et indispensable</strong> pour pouvoir
                 exercer auprès de vos animaux.
               </p>
               <p>
                 Aujourd’hui, je combine les deux casquettes en tant qu’
                 <strong>auxiliaire vétérinaire</strong> en remplacement et{" "}
                 <strong>fondatrice de Deskampet</strong>. Vous l’avez bien
-                compris,
-                <strong>
-                  prendre soin des autres c’est dans mon ADN depuis toujours
-                </strong>
-                .
+                compris,<strong> prendre soin des autres c’est dans mon ADN depuis toujours</strong>.
               </p>
             </div>
           </div>
@@ -152,7 +148,7 @@ export default function Home() {
             </h4>
             <hr style={{ width: 210, border: "solid 1px", color: "#150e38" }} />
             <div
-              className="col-lg-4 my-3 my-lg-0 flex flex-lg-row justify-content-around mr-8"
+              className="col-lg-4 my-3 my-lg-0 flex flex-lg-row justify-content-around"
               style={{ maxWidth: 400, paddingBottom: 10 }}
             >
               <Phone size={20}/>

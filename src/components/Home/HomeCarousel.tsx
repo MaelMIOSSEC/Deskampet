@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-import { animalImages } from "../assets/animals/index.ts";
+import { animalImages } from "../../assets/animals/index.ts";
 
 export function HomeCarousel() {
   const plugin = React.useRef(
