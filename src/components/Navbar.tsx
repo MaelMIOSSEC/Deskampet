@@ -44,6 +44,11 @@ const Navbar = () => {
                 Valeurs
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" style={{ fontSize: 17 }} to="/questions">
+                Questions / Réponses
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

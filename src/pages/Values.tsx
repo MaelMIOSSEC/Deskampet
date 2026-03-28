@@ -2,6 +2,8 @@ import CockerSpaniel from "../assets/valeurs-chien-cocker-jardin.webp";
 import Hors from "../assets/valeurs-lucie-cheval-ecurie.webp";
 import Dog from "../assets/valeurs-lucie-chien-seance-photo.webp";
 
+import ValuesSection from "@/components/Values/ValuesSection";
+
 export default function Values() {
   return (
     <div>
@@ -84,69 +86,7 @@ export default function Values() {
           </div>
         </div>
       </section>
-      <section className="page-section" id="propos">
-        <div className="titres" style={{ paddingTop: 0 }}>
-          <h3 className="section-heading text-uppercase">Mes valeurs</h3>
-          <hr style={{ width: 270, border: "solid 1px" }} />
-          <br />
-        </div>
-        <div className="values">
-          {/* Bienveillance */}
-          <div
-            className="value"
-            style={{ backgroundColor: "#ffcece", color: "#150e38" }}
-          >
-            <i className="fa-solid fa-heart fa-2x" />
-            <h4>Bienveillance</h4>
-            <p>
-              Chaque animal mérite d’être accueilli avec douceur, respect et
-              considération. La bienveillance est au centre de mon approche, que
-              ce soit lors d’une simple balade, d’une garde de quelques heures
-              ou d’un accompagnement sur le long terme. Je prends le temps
-              d’écouter, de rassurer et de créer un climat apaisant où chaque
-              compagnon peut se sentir en sécurité et pleinement lui-même.
-            </p>
-          </div>
-          {/* Passion */}
-          <div
-            className="value"
-            style={{ backgroundColor: "#5fb9a9", color: "white" }}
-          >
-            <i className="fa-solid fa-paw fa-2x" />
-            <h4>Passion</h4>
-            <p>
-              Les animaux ne sont pas seulement un métier pour moi, ils sont une
-              véritable source de joie et d’inspiration. Cette passion guide mes
-              choix au quotidien et me pousse à m’investir pleinement dans
-              chacune de mes missions. Que ce soit pour jouer, prendre soin ou
-              simplement partager un moment de calme, je mets toute mon énergie
-              et mon cœur à offrir aux animaux une expérience positive et
-              enrichissante.
-            </p>
-          </div>
-          {/* Confiance */}
-          <div
-            className="value"
-            style={{
-              backgroundColor: "#fff9f9",
-              color: "#150e38",
-              border: "1px solid",
-            }}
-          >
-            <i className="fa-solid fa-handshake fa-2x" />
-            <h4>Confiance</h4>
-            <p>
-              Laisser son compagnon entre les mains de quelqu’un d’autre demande
-              une grande confiance. C’est pourquoi je privilégie toujours la
-              transparence et la communication avec les propriétaires. Mon
-              objectif est que vous puissiez partir l’esprit tranquille, en
-              sachant que votre animal est respecté, aimé et accompagné avec
-              toute l’attention qu’il mérite. La confiance mutuelle est la clé
-              d’une relation durable et sereine.
-            </p>
-          </div>
-        </div>
-      </section>
+      <ValuesSection />
     </div>
   );
 }

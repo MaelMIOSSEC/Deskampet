@@ -5,8 +5,7 @@ import BlondHairMen from "../assets/profilPictures/blond-hair-men.webp";
 import { Phone, House, Signature, Footprints } from "lucide-react";
 import PriceCards from "../components/Services/PriceCards.tsx";
 import StepCards from "@/components/Services/StepCards.tsx";
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Opinion from "@/components/Services/Opinion.tsx";
 
 export default function Services() {
   return (
@@ -86,90 +85,9 @@ export default function Services() {
           <br />
         </div>
         <div className="flex justify-around gap-4 pr-20 pl-20 pt-2 ">
-          <div
-            style={{
-              width: "500px",
-              height: "200px",
-              borderRadius: "25px",
-              padding: "15px",
-              backgroundColor: "white",
-              boxShadow: "8px 8px 14px gray",
-            }}
-          >
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>
-              <i>
-                "Mon chat était parfaitement soigné, des photos à chaque visite
-                — j'étais totalement rassurée !"
-              </i>
-            </p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <Avatar>
-                <AvatarImage src={BrownHairWoman} alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <div style={{ marginLeft: "15px" }}>
-                <strong>Marie L.</strong>
-                <p>Propriétaire de Milo 🐱</p>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              width: "500px",
-              height: "200px",
-              borderRadius: "25px",
-              padding: "15px",
-              backgroundColor: "white",
-              boxShadow: "8px 8px 14px gray",
-            }}
-          >
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>
-              <i>
-                "Très professionnelle, ponctuelle et à l'écoute. Je recommande
-                vivement pour les promenades !"
-              </i>
-            </p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <Avatar>
-                <AvatarImage src={BrownHairMen} alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <div style={{ marginLeft: "15px" }}>
-                <strong>Thomas B.</strong>
-                <p>Propriétaire de Rex 🐶</p>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              width: "500px",
-              height: "200px",
-              borderRadius: "25px",
-              padding: "15px",
-              backgroundColor: "white",
-              boxShadow: "8px 8px 14px gray",
-            }}
-          >
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>
-              <i>
-                "Un grand merci pour les soins apportés à nos chevaux. Sérieux
-                et bienveillant !"
-              </i>
-            </p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <Avatar>
-                <AvatarImage src={BlondHairMen} alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <div style={{ marginLeft: "15px" }}>
-                <strong>Marc M.</strong>
-                <p>Propriétaire de Luna 🐴</p>
-              </div>
-            </div>
-          </div>
+          <Opinion text="'Mon chat était parfaitement soigné, des photos à chaque visite — j'étais totalement rassurée !'" avatar={BrownHairWoman} name={"Marie L."} animal={"Milo 🐱"} />
+          <Opinion text="'Très professionnelle, ponctuelle et à l'écoute. Je recommande vivement pour les promenades !'" avatar={BrownHairMen} name={"Thomas B."} animal={"Rex 🐶"} />
+          <Opinion text="'Un grand merci pour les soins apportés à nos chevaux. Sérieux et bienveillant !'" avatar={BlondHairMen} name={"Marc M."} animal={"Luna 🐴"} />
         </div>
       </section>
     </div>

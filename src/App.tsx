@@ -5,6 +5,7 @@ import Footer from "./components/Footer.tsx";
 import Home from "./pages/Home.tsx";
 import Services from "./pages/Services.tsx";
 import Values from "./pages/Values.tsx";
+import Questions from "./pages/Questions.tsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/values" element={<Values />} />
+        <Route path="/questions" element={<Questions />} />
       </Routes>
       <Footer />
     </BrowserRouter>
