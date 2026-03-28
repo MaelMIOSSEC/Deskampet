@@ -1,5 +1,17 @@
 import { useState } from "react";
-import { PawPrint, House, Timer, BadgeEuro, FileText, CalendarDays, MapPinHouse, Camera, LockKeyhole, Key, type LucideIcon } from "lucide-react";
+import {
+  PawPrint,
+  House,
+  Timer,
+  BadgeEuro,
+  FileText,
+  CalendarDays,
+  MapPinHouse,
+  Camera,
+  LockKeyhole,
+  Key,
+  type LucideIcon,
+} from "lucide-react";
 
 interface QuestionData {
   id: string;
@@ -74,8 +86,7 @@ const questions: QuestionData[] = [
   },
   {
     id: "Confiance",
-    question:
-      "Aurai-je des nouvelles de mon animal pendant mon absence ?",
+    question: "Aurai-je des nouvelles de mon animal pendant mon absence ?",
     reponse:
       "Bien sûr ! Après chaque visite, je vous envoie un compte-rendu accompagné de photos ou d'une courte vidéo. Partir l'esprit tranquille, c'est aussi ça mon rôle.",
     Icone: Camera,
@@ -102,7 +113,7 @@ const QuestionsSection = () => {
             <button
               key={category}
               onClick={() => filterQuestion(category)}
-              className="btn btn-outline-primary btn-sm px-4 mx-1"
+              className="btn btn-outline-secondary btn-sm px-4 mx-1 w-29"
             >
               {category}
             </button>
@@ -122,14 +133,7 @@ const QuestionsSection = () => {
               style={{ display: "flex", justifyContent: "space-between" }}
             >
               {question.question}
-              <div
-                style={{
-                  padding: "10px",
-                  borderRadius: "10px",
-                  backgroundColor: "white",
-                  boxShadow: "2px 1px 6px gray",
-                }}
-              >
+              <div className="p-2.5 rounded-[10px] bg-white shadow-[2px_1px_6px_gray]">
                 <question.Icone />
               </div>
             </summary>
