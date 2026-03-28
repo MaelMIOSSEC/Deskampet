@@ -665,3 +665,20 @@
     @apply font-sans;
   }
 }
+
+/* ===================== */
+/* QUESTIONS             */
+/* ===================== */
+
+details > div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease;
+  opacity: 0;
+}
+
+details[open] > div {
+  max-height: 500px;
+  opacity: 1;
+  padding: 1rem;
+}

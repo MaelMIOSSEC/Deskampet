@@ -1,7 +1,26 @@
-const values = [
+import { Heart, PawPrint, Handshake, type LucideIcon } from "lucide-react";
+
+interface ValueData {
+  id: string;
+  Icone: LucideIcon;
+  label: string;
+  title: string;
+  quote: string;
+  text: string;
+  accent: string;
+  bg: string;
+  cardBg: string;
+  iconBg: string;
+  iconColor: string;
+  textColor: string;
+  quoteColor: string;
+  delay: string;
+}
+
+const values: ValueData[] = [
   {
     id: "bienveillance",
-    icon: "fa-solid fa-heart",
+    Icone: Heart,
     label: "01",
     title: "Bienveillance",
     quote: "« Chaque animal est unique, chaque soin l'est aussi. »",
@@ -17,7 +36,7 @@ const values = [
   },
   {
     id: "passion",
-    icon: "fa-solid fa-paw",
+    Icone: PawPrint,
     label: "02",
     title: "Passion",
     quote: "« Je mets tout mon cœur dans chaque mission. »",
@@ -33,7 +52,7 @@ const values = [
   },
   {
     id: "confiance",
-    icon: "fa-solid fa-handshake",
+    Icone: Handshake,
     label: "03",
     title: "Confiance",
     quote: "« La transparence est la base d'une relation durable. »",
@@ -276,26 +295,21 @@ export default function ValuesSection() {
                 animationDelay: v.delay,
               }}
             >
-              {/* Icône */}
               <div className="value-icon-wrap" style={{ background: v.iconBg }}>
-                <i className={v.icon} style={{ color: v.iconColor }} />
+                <v.Icone style={{ color: v.iconColor }}  />
               </div>
 
-              {/* Titre */}
               <h3 className="value-title" style={{ color: v.textColor }}>
                 {v.title}
               </h3>
 
-              {/* Trait */}
               <div
                 className="value-divider"
                 style={{ background: v.iconColor }}
               />
 
-              {/* Texte */}
               <p className="value-text">{v.text}</p>
 
-              {/* Citation */}
               <div
                 className="value-quote"
                 style={{
