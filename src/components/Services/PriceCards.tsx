@@ -61,17 +61,18 @@ const PriceCards = () =>
       <div className="flex justify-center mb-4">
         <priceCard.Icone size={48} />
       </div>
-      <h5 className="whitespace-pre-line">{priceCard.titre}</h5>
-      <h2>{priceCard.prix}</h2>
+      <h5 className="whitespace-pre-line text-center">{priceCard.titre}</h5>
+      <h2 className="text-center">{priceCard.prix}</h2>
       <hr
+        className="my-4"
         style={{
           width: 100,
           border: "solid 1px",
           color: priceCard.couleurDelimitation,
         }}
       />
-      <h5>{priceCard.duree}</h5>
-      <p>{priceCard.description}</p>
+      <h5 className="text-center">{priceCard.duree}</h5>
+      <p className="text-center mt-2">{priceCard.description}</p>
     </div>
   ));
 

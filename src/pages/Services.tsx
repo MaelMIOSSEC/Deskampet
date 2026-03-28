@@ -12,14 +12,14 @@ export default function Services() {
     <div>
       <section
         className="page-section"
-        style={{ padding: "200px 0 0 0" }}
+        style={{ padding: "150px 0 0 0" }}
         id="services"
       >
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="text-center">
-            <div className="titres">
+            <div className="titres flex flex-col items-center">
               <h3
-                className="section-heading text-uppercase"
+                className="section-heading text-uppercase text-center"
                 style={{ color: "#150e38" }}
               >
                 PRESTATIONS ET TARIFS
@@ -28,17 +28,16 @@ export default function Services() {
               <br />
             </div>
           </div>
-          <div className="test">
-            <div className="service-img">
-              <PriceCards />
-            </div>
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 mt-8">
+            <PriceCards />
           </div>
         </div>
       </section>
-      <section className="page-section">
-        <div className="titres">
+      
+      <section className="page-section mt-16">
+        <div className="titres flex flex-col items-center">
           <h3
-            className="section-heading text-uppercase"
+            className="section-heading text-uppercase text-center"
             style={{ color: "#150e38" }}
           >
             COMMENT ÇA FONCTIONNE ?
@@ -46,7 +45,7 @@ export default function Services() {
           <hr style={{ width: 270, border: "solid 1px" }} />
           <br />
         </div>
-        <div className="flex justify-around gap-4 pr-20 pl-20 pt-2 ">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 px-4 lg:px-20 pt-2">
           <StepCards
             number="1"
             title="Prise de contact"
@@ -73,10 +72,11 @@ export default function Services() {
           />
         </div>
       </section>
-      <section className="page-section">
-        <div className="titres">
+
+      <section className="page-section mt-16 mb-16">
+        <div className="titres flex flex-col items-center">
           <h3
-            className="section-heading text-uppercase"
+            className="section-heading text-uppercase text-center"
             style={{ color: "#150e38" }}
           >
             CE QUE DISENT LES FAMILLES
@@ -84,7 +84,7 @@ export default function Services() {
           <hr style={{ width: 270, border: "solid 1px" }} />
           <br />
         </div>
-        <div className="flex justify-around gap-4 pr-20 pl-20 pt-2 ">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 px-4 lg:px-20 pt-2">
           <Opinion text="'Mon chat était parfaitement soigné, des photos à chaque visite — j'étais totalement rassurée !'" avatar={BrownHairWoman} name={"Marie L."} animal={"Milo 🐱"} />
           <Opinion text="'Très professionnelle, ponctuelle et à l'écoute. Je recommande vivement pour les promenades !'" avatar={BrownHairMen} name={"Thomas B."} animal={"Rex 🐶"} />
           <Opinion text="'Un grand merci pour les soins apportés à nos chevaux. Sérieux et bienveillant !'" avatar={BlondHairMen} name={"Marc M."} animal={"Luna 🐴"} />
