@@ -271,15 +271,12 @@ export default function ValuesSection() {
         }
       `}</style>
 
-      <section className="page-section" id="propos">
+      <section className="page-section" id="values">
         <div className="titres">
-          <h3
-            className="section-heading text-uppercase"
-            style={{ color: "#150e38" }}
-          >
+          <h3 className="section-heading text-uppercase text-[#150e38]">
             CE QUI ME GUIDE
           </h3>
-          <hr style={{ width: 270, border: "solid 1px" }} />
+          <hr className="w-67.5" />
           <br />
         </div>
 
@@ -296,7 +293,7 @@ export default function ValuesSection() {
               }}
             >
               <div className="value-icon-wrap" style={{ background: v.iconBg }}>
-                <v.Icone style={{ color: v.iconColor }}  />
+                <v.Icone style={{ color: v.iconColor }} />
               </div>
 
               <h3 className="value-title" style={{ color: v.textColor }}>

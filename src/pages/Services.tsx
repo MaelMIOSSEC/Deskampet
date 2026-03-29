@@ -13,39 +13,33 @@ export default function Services() {
       <section
         className="page-section"
         style={{ padding: "150px 0 0 0" }}
-        id="services"
+        id="price"
       >
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="titres flex flex-col items-center">
-              <h3
-                className="section-heading text-uppercase text-center"
-                style={{ color: "#150e38" }}
-              >
+              <h3 className="section-heading text-uppercase text-center text-[#150e38]">
                 PRESTATIONS ET TARIFS
               </h3>
-              <hr style={{ width: 270, border: "solid 1px" }} />
+              <hr className="w-67.5" />
               <br />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 mt-8">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8">
             <PriceCards />
           </div>
         </div>
       </section>
-      
-      <section className="page-section mt-16">
+
+      <section className="page-section mt-16" id="operation">
         <div className="titres flex flex-col items-center">
-          <h3
-            className="section-heading text-uppercase text-center"
-            style={{ color: "#150e38" }}
-          >
+          <h3 className="section-heading text-uppercase text-center text-[#150e38]">
             COMMENT ÇA FONCTIONNE ?
           </h3>
-          <hr style={{ width: 270, border: "solid 1px" }} />
+          <hr className="w-67.5" />
           <br />
         </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 px-4 lg:px-20 pt-2">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 px-4 lg:px-20 pt-2 mt-4">
           <StepCards
             number="1"
             title="Prise de contact"
@@ -73,21 +67,33 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="page-section mt-16 mb-16">
+      <section className="page-section mt-16 mb-16" id="opinion">
         <div className="titres flex flex-col items-center">
-          <h3
-            className="section-heading text-uppercase text-center"
-            style={{ color: "#150e38" }}
-          >
+          <h3 className="section-heading text-uppercase text-center text-[#150e38]">
             CE QUE DISENT LES FAMILLES
           </h3>
-          <hr style={{ width: 270, border: "solid 1px" }} />
+          <hr className="w-67.5" />
           <br />
         </div>
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 px-4 lg:px-20 pt-2">
-          <Opinion text="'Mon chat était parfaitement soigné, des photos à chaque visite — j'étais totalement rassurée !'" avatar={BrownHairWoman} name={"Marie L."} animal={"Milo 🐱"} />
-          <Opinion text="'Très professionnelle, ponctuelle et à l'écoute. Je recommande vivement pour les promenades !'" avatar={BrownHairMen} name={"Thomas B."} animal={"Rex 🐶"} />
-          <Opinion text="'Un grand merci pour les soins apportés à nos chevaux. Sérieux et bienveillant !'" avatar={BlondHairMen} name={"Marc M."} animal={"Luna 🐴"} />
+          <Opinion
+            text="'Mon chat était parfaitement soigné, des photos à chaque visite — j'étais totalement rassurée !'"
+            avatar={BrownHairWoman}
+            name={"Marie L."}
+            animal={"Milo 🐱"}
+          />
+          <Opinion
+            text="'Très professionnelle, ponctuelle et à l'écoute. Je recommande vivement pour les promenades !'"
+            avatar={BrownHairMen}
+            name={"Thomas B."}
+            animal={"Rex 🐶"}
+          />
+          <Opinion
+            text="'Un grand merci pour les soins apportés à nos chevaux. Sérieux et bienveillant !'"
+            avatar={BlondHairMen}
+            name={"Marc M."}
+            animal={"Luna 🐴"}
+          />
         </div>
       </section>
     </div>

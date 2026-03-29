@@ -12,13 +12,10 @@ export default function Home() {
 
   return (
     <div>
-      <header className="masthead" id="header" style={{ marginTop: 50 }}>
+      <header className="masthead mt-12.5" id="header">
         <div className="row">
-          <div
-            className="col-lg-6 col-md-12 col-sm-12 zone"
-            style={{ margin: "20px 0" }}
-          >
-            <p className="p-masthead" style={{ color: "#150e38" }}>
+          <div className="col-lg-6 col-md-12 col-sm-12 zone my-5">
+            <p className="p-masthead text-[#150e38]">
               Deskampet est une entreprise professionnelle de services
               animaliers qui intervient sur la région de Landerneau et ses
               alentours. Elle vous propose des services de visites à votre
@@ -34,19 +31,16 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section className="page-section" id="propos">
+      <section className="page-section" id="about">
         <div className="container">
           <div className="text-center">
             <div className="titres">
               <h3 className="section-heading text-uppercase">À PROPOS</h3>
-              <hr style={{ width: 270, border: "solid 1px" }} />
+              <hr className="w-67.5" />
               <br />
             </div>
           </div>
-          <div
-            className="row align-items-center"
-            style={{ textAlign: "center", color: "#150e38" }}
-          >
+          <div className="row align-items-center text-[#150e38] text-center">
             <div className="col-lg-12">
               <p>
                 Vous vous demandez certainement qui se cache derrière ce sourire
@@ -70,8 +64,9 @@ export default function Home() {
                 travaillé quelques années dans le commerce landernéen, je décide
                 de <strong>repartir à zéro</strong>. La passion des animaux est
                 intacte, je découvre (enfin!) l’équitation et j’apprends la
-                <strong> patience</strong>. D’un autre côté, Doska vieillit et je
-                prends particulièrement à cœur d’effectuer ses différents soins.
+                <strong> patience</strong>. D’un autre côté, Doska vieillit et
+                je prends particulièrement à cœur d’effectuer ses différents
+                soins.
               </p>
               <p>
                 Me revoilà donc plus motivée que jamais sur les bancs de l’école
@@ -93,19 +88,24 @@ export default function Home() {
                 Aujourd’hui, je combine les deux casquettes en tant qu’
                 <strong>auxiliaire vétérinaire</strong> en remplacement et{" "}
                 <strong>fondatrice de Deskampet</strong>. Vous l’avez bien
-                compris,<strong> prendre soin des autres c’est dans mon ADN depuis toujours</strong>.
+                compris,
+                <strong>
+                  {" "}
+                  prendre soin des autres c’est dans mon ADN depuis toujours
+                </strong>
+                .
               </p>
             </div>
           </div>
         </div>
       </section>
-      <div id="clients" style={{ marginBottom: 50 }}>
+      <div id="clients" className="mb-12.5">
         <div className="text-center">
           <div className="titres">
             <h3 className="section-heading text-uppercase">
               Suivez Deskampet sur Instagram
             </h3>
-            <hr style={{ width: 270, border: "solid 1px" }} />
+            <hr className="w-67.5" />
             <br />
           </div>
         </div>
@@ -114,23 +114,13 @@ export default function Home() {
         </div>
       </div>
       <div className="row contact" id="contact">
-        <div
-          className="text-center col-lg-6"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div className="text-center col-lg-6 flex align-center justify-center">
           <div className="zone">
-            <h4
-              className="section-heading text-uppercase"
-              style={{ maxWidth: 300 }}
-            >
+            <h4 className="section-heading text-uppercase max-w-75">
               Zone couverte
             </h4>
-            <hr style={{ width: 210, border: "solid 1px", color: "#150e38" }} />
-            <p style={{ maxWidth: 400 }}>
+            <hr className="w-52.5 text-[#150e38]" />
+            <p className="max-w-100">
               Landerneau et dans un secteur de 15 km à la ronde.
             </p>
             <button
@@ -140,40 +130,24 @@ export default function Home() {
             >
               Voir la carte
             </button>
-            <h4
-              className="section-heading text-uppercase"
-              style={{ marginTop: 20 }}
-            >
+            <h4 className="section-heading text-uppercase mt-4">
               CONTACTEZ-MOI
             </h4>
-            <hr style={{ width: 210, border: "solid 1px", color: "#150e38" }} />
-            <div
-              className="col-lg-4 my-3 my-lg-0 flex flex-lg-row justify-content-around"
-              style={{ maxWidth: 400, paddingBottom: 10 }}
-            >
-              <Phone size={20}/>
-              <AtSign size={20}/>
+            <hr className="w-52.5 text-[#150e38]" />
+            <div className="col-lg-4 my-3 my-lg-0 flex flex-lg-row justify-content-around max-w-100 pb-2.5">
+              <Phone size={20} />
+              <AtSign size={20} />
             </div>
             <h4>06 03 01 37 00</h4>
             <h4>deskampet@gmail.com</h4>
           </div>
         </div>
-        <div
-          className="text-center col-lg-6"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div className="text-center col-lg-6 flex align-center justify-center">
           <div className="zone">
-            <h4
-              className="section-heading text-uppercase"
-              style={{ maxWidth: 400 }}
-            >
+            <h4 className="section-heading text-uppercase max-w-100">
               Agréments / Certifications
             </h4>
-            <hr style={{ width: 210, border: "solid 1px", color: "#150e38" }} />
+            <hr className="w-52.5 text-[#150e38]" />
             <ul className="list-unstyled">
               <li>
                 <strong>✅ ACACED :</strong> Attestation de Connaissances pour

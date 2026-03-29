@@ -3,10 +3,7 @@ import { TfiFacebook } from "react-icons/tfi";
 
 const Footer = () => {
   return (
-    <footer
-      className="footer py-4"
-      style={{ backgroundColor: "#5fb9a9", color: "white" }}
-    >
+    <footer className="footer py-4 bg-[#5fb9a9] text-white">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-4 text-lg-start">
@@ -31,25 +28,13 @@ const Footer = () => {
             </a>
           </div>
           <div className="col-lg-4 text-lg-end">
-            <a
-              className="text-decoration-none me-3"
-              style={{ color: "white" }}
-              href="#!"
-            >
+            <a className="text-decoration-none me-3 text-white" href="#!">
               Mentions légales
             </a>
-            <a
-              className="text-decoration-none me-3"
-              style={{ color: "white" }}
-              href="#!"
-            >
+            <a className="text-decoration-none me-3 text-white" href="#!">
               Politique de confidentialité
             </a>
-            <a
-              className="text-decoration-none "
-              style={{ color: "white" }}
-              href="#!"
-            >
+            <a className="text-decoration-none text-white" href="#!">
               CGV
             </a>
           </div>

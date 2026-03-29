@@ -64,10 +64,8 @@ const PriceCards = () =>
       <h5 className="whitespace-pre-line text-center">{priceCard.titre}</h5>
       <h2 className="text-center">{priceCard.prix}</h2>
       <hr
-        className="my-4"
+        className="my-4 w-30"
         style={{
-          width: 100,
-          border: "solid 1px",
           color: priceCard.couleurDelimitation,
         }}
       />

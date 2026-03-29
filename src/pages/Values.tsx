@@ -41,17 +41,17 @@ export default function Values() {
         }
       `}</style>
 
-      <section className="page-section" id="propos">
+      <section className="page-section" id="history">
         <div className="values-center">
           {/* Mon histoire */}
           <div className="values-info">
             <img
+              className="rounded-3xl"
               src={Hors}
               width="250px"
               height="250px"
-              style={{ borderRadius: 25 }}
             />
-            <div className="values-text" style={{ paddingLeft: 45 }}>
+            <div className="values-text pl-11.25">
               <h3 className="section-heading text-uppercase">Mon histoire</h3>
               <p>
                 Depuis mon plus jeune âge, les animaux occupent une place
@@ -68,8 +68,8 @@ export default function Values() {
             </div>
           </div>
           {/* Qui suis-je ? */}
-          <div className="values-info" style={{ padding: "60px 0 60px 0" }}>
-            <div className="values-text" style={{ paddingRight: 45 }}>
+          <div className="values-info py-15">
+            <div className="values-text pr-11.25">
               <h3 className="section-heading text-uppercase">Qui suis-je ?</h3>
               <p>
                 Je m'appelle Lucie, et avant d'être PetSitter, je suis avant
@@ -85,21 +85,21 @@ export default function Values() {
               </p>
             </div>
             <img
+              className="rounded-3xl"
               src={Dog}
               width="250px"
               height="250px"
-              style={{ borderRadius: 25 }}
             />
           </div>
           {/* Qui est Doska ? */}
           <div className="values-info">
             <img
+              className="rounded-3xl"
               src={CockerSpaniel}
               width="250px"
               height="250px"
-              style={{ borderRadius: 25 }}
             />
-            <div className="values-text" style={{ paddingLeft: 45 }}>
+            <div className="values-text pl-11.25">
               <h3 className="section-heading text-uppercase">
                 Qui est Doska ?
               </h3>
