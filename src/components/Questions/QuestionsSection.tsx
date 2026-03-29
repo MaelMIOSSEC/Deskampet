@@ -13,11 +13,40 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+interface SectionData {
+  name: string;
+  color: string;
+}
+
+const sections: SectionData[] = [
+  {
+    name: "Services",
+    color: "#5fb9a9",
+  },
+  {
+    name: "Tarifs",
+    color: "#e8a840",
+  },
+  {
+    name: "Animaux",
+    color: "#72b554",
+  },
+  {
+    name: "Pratique",
+    color: "#5b8fd4",
+  },
+  {
+    name: "Confiance",
+    color: "#8b6fcb",
+  },
+];
+
 interface QuestionData {
   id: string;
   question: string;
   reponse: string;
   Icone: LucideIcon;
+  sectionDatas: SectionData | null;
 }
 
 const questions: QuestionData[] = [
@@ -27,6 +56,7 @@ const questions: QuestionData[] = [
     reponse:
       "Je m'occupe des chiens, chats, NAC (lapins, rongeurs, oiseaux, reptiles…) et des chevaux. Si vous avez un doute sur votre animal, n'hésitez pas à me contacter — j'étudierai votre situation avec plaisir.",
     Icone: PawPrint,
+    sectionDatas: sections.filter((q) => q.name === "Services")[0],
   },
   {
     id: "Services",
@@ -34,6 +64,7 @@ const questions: QuestionData[] = [
     reponse:
       "Oui, toutes mes interventions ont lieu chez vous. Cela permet à votre animal de rester dans son environnement familier, ce qui réduit le stress et favorise son bien-être pendant votre absence.",
     Icone: House,
+    sectionDatas: null,
   },
   {
     id: "Services",
@@ -41,6 +72,7 @@ const questions: QuestionData[] = [
     reponse:
       "Les visites pour chats et NAC durent environ 30 minutes. Les promenades pour chiens vont de 30 minutes à 1 heure. Pour les chevaux, la durée varie selon les soins à effectuer et est définie ensemble lors de la pré-visite.",
     Icone: Timer,
+    sectionDatas: null,
   },
   {
     id: "Tarifs",
@@ -48,6 +80,7 @@ const questions: QuestionData[] = [
     reponse:
       "Non, la pré-visite est totalement gratuite et sans engagement. C'est un moment essentiel pour faire connaissance avec vous et votre animal, et s'assurer que nous sommes bien en accord avant de démarrer.",
     Icone: FileText,
+    sectionDatas: sections.filter((q) => q.name === "Tarifs")[0],
   },
   {
     id: "Tarifs",
@@ -55,6 +88,7 @@ const questions: QuestionData[] = [
     reponse:
       "Le paiement s'effectue à la fin de chaque prestation, ou mensuellement pour les missions régulières. J'accepte les espèces, les virements bancaires et les chèques emploi-service universel (CESU).",
     Icone: BadgeEuro,
+    sectionDatas: null,
   },
   {
     id: "Tarifs",
@@ -62,6 +96,7 @@ const questions: QuestionData[] = [
     reponse:
       "Les tarifs restent identiques en semaine, week-end et jours fériés. Les tarifs affichés sur ma page prestations sont ceux que vous paierez, sans aucune mauvaise surprise.",
     Icone: CalendarDays,
+    sectionDatas: null,
   },
   {
     id: "Pratique",
@@ -69,6 +104,7 @@ const questions: QuestionData[] = [
     reponse:
       "J'interviens à Landerneau et dans un rayon de 10 km environ (La Roche-Maurice, Pencran, Le Folgoët…). Pour une localisation plus éloignée, contactez-moi : selon les disponibilités, des déplacements supplémentaires peuvent être envisagés.",
     Icone: MapPinHouse,
+    sectionDatas: sections.filter((q) => q.name === "Pratique")[0],
   },
   {
     id: "Pratique",
@@ -76,6 +112,7 @@ const questions: QuestionData[] = [
     reponse:
       "Lors de la pré-visite, nous convenons ensemble du mode d'accès (clés, boîte à clés, digicode…). Un exemplaire de clé peut m'être confié sous ma responsabilité, et toute remise est mentionnée dans le contrat de prestation.",
     Icone: Key,
+    sectionDatas: null,
   },
   {
     id: "Confiance",
@@ -83,6 +120,7 @@ const questions: QuestionData[] = [
     reponse:
       "Oui, je dispose d'une assurance Responsabilité Civile Professionnelle. En cas d'incident, vous êtes couverts. Je peux vous communiquer les détails de ma couverture sur simple demande.",
     Icone: LockKeyhole,
+    sectionDatas: sections.filter((q) => q.name === "Confiance")[0],
   },
   {
     id: "Confiance",
@@ -90,6 +128,7 @@ const questions: QuestionData[] = [
     reponse:
       "Bien sûr ! Après chaque visite, je vous envoie un compte-rendu accompagné de photos ou d'une courte vidéo. Partir l'esprit tranquille, c'est aussi ça mon rôle.",
     Icone: Camera,
+    sectionDatas: null,
   },
 ];
 
@@ -104,6 +143,8 @@ const QuestionsSection = () => {
       setDisplayQuestions(filtered);
     }
   }
+
+  console.log("question => ", questions);
 
   return (
     <>
@@ -127,18 +168,35 @@ const QuestionsSection = () => {
 
       <div className="mt-10 space-y-4">
         {displayQuestions.map((question, index) => (
-          <details key={index} className="border-2 rounded-3xl">
-            <summary
-              className="p-4 font-medium text-lg text-gray-900 cursor-pointer hover:text-[#5fb9a9] items-center"
-              style={{ display: "flex", justifyContent: "space-between" }}
-            >
-              {question.question}
-              <div className="p-2.5 rounded-[10px] bg-white shadow-[2px_1px_6px_gray]">
-                <question.Icone />
+          <>
+            {question.sectionDatas !== null && (
+              <div className="flex flex-row items-center">
+                <div
+                  className="w-3 h-3 rounded-xl"
+                  style={{ backgroundColor: question.sectionDatas?.color }}
+                ></div>
+                <p
+                  className="px-4 m-0 leading-none"
+                  style={{ color: question.sectionDatas?.color }}
+                >
+                  {question.sectionDatas?.name}
+                </p>
+                <hr className="grow border-t m-0" />
               </div>
-            </summary>
-            <div className="p-4 bg-gray-100 italic">{question.reponse}</div>
-          </details>
+            )}
+            <details key={index} className="border-2 rounded-3xl">
+              <summary
+                className="p-4 font-medium text-lg text-gray-900 cursor-pointer hover:text-[#5fb9a9] items-center"
+                style={{ display: "flex", justifyContent: "space-between" }}
+              >
+                {question.question}
+                <div className="p-2.5 rounded-[10px] bg-white shadow-[2px_1px_6px_gray]">
+                  <question.Icone />
+                </div>
+              </summary>
+              <div className="p-4 bg-gray-100 italic">{question.reponse}</div>
+            </details>
+          </>
         ))}
       </div>
     </>
