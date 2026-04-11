@@ -3,7 +3,7 @@ import { useState } from "react";
 import MapModal from "../components/Home/MapModal.tsx";
 import { HomeCarousel } from "../components/Home/HomeCarousel.tsx";
 
-import LuciePprofilePicture from "../assets/presentation-lucie-chien-champ.jpeg";
+import LucieProfilePicture from "../assets/presentation-lucie-chien-champ.jpeg";
 
 import { Phone, AtSign } from "lucide-react";
 
@@ -27,7 +27,11 @@ export default function Home() {
             </p>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
-            <img src={LuciePprofilePicture} width="100%" />
+            <img
+              src={LucieProfilePicture}
+              width="100%"
+              alt="Image illustrating Lucie squatting and a dog. They are both in a garden."
+            />
           </div>
         </div>
       </header>
